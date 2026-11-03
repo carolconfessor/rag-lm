@@ -1,0 +1,29 @@
+[project]
+name = "malware-llm"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Carol Confessor", email = "anny.confessor@gmail.com" }
+]
+requires-python = ">=3.9"
+dependencies = [
+    "anthropic>=0.125.0",
+    "httpx>=0.28.1",
+    "pydantic>=2.13.5",
+    "pydantic-settings>=2.11.0",
+]
+
+[project.scripts]
+malware-llm = "malware_llm:main"
+
+[build-system]
+requires = ["uv_build>=0.13.7,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "mypy>=1.19.1",
+    "pytest>=8.4.2",
+    "ruff>=0.17.3",
+]
